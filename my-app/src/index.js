@@ -18,6 +18,10 @@ function calculateWinner(squares) {
 		[2, 5, 8],
 		[0, 4, 8],
 		[2, 4, 6],
+		[0, 4, 6],
+		[0, 4, 2],
+		[8, 4, 6],
+		[8, 4, 2]
 	];
 	for (let i = 0; i < lines.length; i++) {
 		const [a, b, c] = lines[i];
@@ -66,7 +70,7 @@ class Game extends React.Component {
 		this.state = {
 			player: Array(2).fill(Array(2)),
 			history: [{ 
-				squares: ['Z',null,null,null,'Z',null,'Z',null,null],
+				squares: Array(9).fill(null),
 			}],
 			turn: 1,
 			player: [['Lichtut','P'],[new Array('AkhilJoshi','Petros Prokopiou','koderproxy')[Math.floor(Math.random()*3)],'Z']],
